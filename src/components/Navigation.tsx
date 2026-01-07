@@ -62,13 +62,14 @@ export const Navigation = () => {
             : "bg-transparent"
         }`}
       >
+      {/*nav bar logo initials*/}
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a
               href="#"
               className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             >
-              KR
+              BP
             </a>
 
             {/* Desktop Navigation */}
