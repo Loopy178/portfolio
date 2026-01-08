@@ -1,8 +1,8 @@
 const skills = {
-  "Customer Service": ["Customer Assistance", "Customer Relations", "Product Recommendations", "Customer Service"],
-  "Retail Operations": ["Payment Collection", "Returns Processing", "Cash Handling", "Inventory Control"],
-  "Technical & Communication": ["Strong Communicator", "Team Player", "Problem Solving", "Python"],
-  "Languages": ["English", "Fluent Communication"],
+  "Languages": ["Python", "Java", "C++", "JavaScript", "TypeScript"],
+  "Databases": ["MySQL", "PostgreSQL", "MongoDB", "JSON"],
+  "Frameworks & Libraries": ["ReactJS", "NodeJS", "Express"],
+  "Development Tools": ["Git", "Docker", "VS Code", "Matlab"],
 };
 
 export const Skills = () => {

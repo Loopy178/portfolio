@@ -92,7 +92,7 @@ export const Contact = () => {
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="text-lg font-bold mb-4">Let's Connect!</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm always open to discussing new opportunities, collaborations, and learning experiences. Feel free to reach out and let's connect!
+                I'm always open to discussing new opportunities, collaborations, and learning experiences. Feel free to reach out!
               </p>
             </div>
           </div>

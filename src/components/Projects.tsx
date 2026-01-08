@@ -16,6 +16,18 @@ const projects = [
     gradient: "from-primary to-accent",
   },
   {
+    title: "FlamSlides",
+    description: "Created a presentation tool using React and Tailwind CSS that allows users to create and share presentations with ease.",
+    tech: ["React", "Tailwind CSS", "Presentation Tool"],
+    highlights: [
+      "Created a presentation tool using React and Tailwind CSS.",
+      "Allowed users to create and share presentations with ease using the power of AI.",
+      "Implemented features like slide navigation and presentation sharing.",
+    ],
+    github: "#",
+    gradient: "from-primary to-accent",
+  },
+  {
     title: "UMSATs - Software Team",
     description: "Actively engaged with UMSATs organization on space-related projects and initiatives, contributing to the software team developing tools using Python.",
     tech: ["Python", "Space Technology", "Software Development"],
@@ -25,7 +37,7 @@ const projects = [
       "Participating in advancing space-related projects and initiatives.",
     ],
     github: "#",
-    gradient: "from-secondary to-primary",
+    gradient: "from-secondary to-primary",  
   },
 
 ];

@@ -10,7 +10,7 @@ export const Footer = () => {
               Brijesh Patel
             </p>
             <p className="text-sm text-muted-foreground">
-              Building intelligent solutions with AI/ML
+              Building whatever inspires me.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2025 Brijesh Patel. All rights reserved.</p>
+          <p>© 2026 Brijesh Patel. All rights reserved.</p>
         </div>
       </div>
     </footer>

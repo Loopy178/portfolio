@@ -15,19 +15,7 @@ const experiences = [
     ],
     color: "from-primary to-accent",
   },
-  {
-    title: "Sales Associate",
-    company: "LC Waikiki",
-    location: "Nairobi, Kenya",
-    period: "Jan 2022 – Aug 2023",
-    achievements: [
-      "Answered customer questions about products and assisted with requests.",
-      "Restocked and organized merchandise on the sales floor efficiently.",
-      "Advised customers concerning particular products and services.",
-      "Executed purchases and returns at the cash register with accuracy.",
-    ],
-    color: "from-secondary to-primary",
-  },
+  
 ];
 
 export const Experience = () => {
