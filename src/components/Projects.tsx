@@ -12,7 +12,7 @@ const projects = [
       "Won the People's Choice Award at the University of Manitoba hackathon.",
       "Learned game development fundamentals and collaborative problem-solving under time constraints.",
     ],
-    github: "#",
+    github: "https://github.com/yenaing-oo/Cooked-CSSA-GameJam-2024",
     gradient: "from-primary to-accent",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
       "Allowed users to create and share presentations with ease using the power of AI.",
       "Implemented features like slide navigation and presentation sharing.",
     ],
-    github: "#",
+    github: "https://github.com/Bhaulik/Flamslides",
     gradient: "from-primary to-accent",
   },
   {
@@ -36,7 +36,6 @@ const projects = [
       "Contributing to the software team developing software tools using Python.",
       "Participating in advancing space-related projects and initiatives.",
     ],
-    github: "#",
     gradient: "from-secondary to-primary",  
   },
 
