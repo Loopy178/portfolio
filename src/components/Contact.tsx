@@ -14,27 +14,29 @@ export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const form = e.currentTarget;
+      const fd = new FormData(form);
+      fd.append("access_key", "4bae47da-57ad-4a35-ae04-cd20c392de50");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd,
       });
 
-      if (response.ok) {
+      const data = await response.json();
+      if (data.success) {
         toast({
           title: "Message sent!",
           description: "Thank you for reaching out. I'll get back to you soon!",
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
-        throw new Error('Failed to send message');
+        throw new Error(data.message || "Failed to send message");
       }
     } catch (error) {
       toast({
@@ -106,6 +108,7 @@ export const Contact = () => {
                 </label>
                 <Input
                   id="name"
+                  name="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Your name"
@@ -120,6 +123,7 @@ export const Contact = () => {
                 </label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -135,6 +139,7 @@ export const Contact = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Your message..."
