@@ -64,26 +64,6 @@ export const Contact = () => {
           <div className="space-y-6 animate-fade-in-up">
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Email</h3>
-                  <a
-                    href="mailto:brijjj213@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    brijjj213@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-white" />
-                </div>
                 <div>
                   <h3 className="text-lg font-bold mb-2">Location</h3>
                   <p className="text-muted-foreground">Winnipeg, Manitoba, Canada</p>
@@ -94,7 +74,7 @@ export const Contact = () => {
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="text-lg font-bold mb-4">Let's Connect!</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm always open to discussing new opportunities, collaborations, and learning experiences. Feel free to reach out!
+                I'm always open to discussing new opportunities and selected topics of physics.
               </p>
             </div>
           </div>
