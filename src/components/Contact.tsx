@@ -64,17 +64,13 @@ export const Contact = () => {
           <div className="space-y-6 animate-fade-in-up">
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Location</h3>
-                  <p className="text-muted-foreground">Winnipeg, Manitoba, Canada</p>
-                </div>
               </div>
             </div>
 
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="text-lg font-bold mb-4">Let's Connect!</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm always open to discussing new opportunities and selected topics of physics.
+                I'm always open to discussing new opportunities and selected topics of physics. I also like hiking so we can also talk about that!
               </p>
             </div>
           </div>

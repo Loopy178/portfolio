@@ -45,7 +45,7 @@ export const About = () => {
 
         <div className="bg-card border border-border rounded-2xl p-8 md:p-12 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            I'm a first-year Computer Science and Physics student at the University of Manitoba with a passion for technology and problem-solving. A highly motivated individual and strong communicator, I'm eager to learn new processes and contribute to innovative projects.
+            I'm a third-year Computer Science and Physics student at the University of Manitoba with a passion for technology and problem-solving. A highly motivated individual and strong communicator, I'm eager to learn new processes and contribute to innovative projects.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             With experience in customer service and retail, I bring excellent interpersonal skills and attention to detail. I'm actively involved in university clubs and organizations, including participation in game development hackathons and the UMSATs space-related software initiatives. I'm committed to expanding my technical knowledge and making meaningful contributions to the technology community.

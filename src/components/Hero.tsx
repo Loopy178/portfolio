@@ -37,7 +37,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-xl md:text-2xl text-muted-foreground mb-4"
         >
-          Technology Enthusiast & Problem Solver
+          Eager to learn new things & Problem Solver
         </motion.p>
 
         <motion.p
