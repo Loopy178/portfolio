@@ -70,7 +70,7 @@ export const Contact = () => {
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="text-lg font-bold mb-4">Let's Connect!</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm always open to discussing new opportunities and selected topics of physics. I also like hiking so we can also talk about that!
+                I'm always open to discussing new opportunities and selected topics of physics. I also like hiking so we can also talk about that too!
               </p>
             </div>
           </div>
