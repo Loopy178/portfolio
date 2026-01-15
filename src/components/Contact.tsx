@@ -62,11 +62,6 @@ export const Contact = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Info */}
           <div className="space-y-6 animate-fade-in-up">
-            <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start gap-4">
-              </div>
-            </div>
-
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="text-lg font-bold mb-4">Let's Connect!</h3>
               <p className="text-muted-foreground leading-relaxed">
