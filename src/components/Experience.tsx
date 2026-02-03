@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Cashier / Sales Associate",
+    title: "Cashier / Team Leader",
     company: "West 49",
     location: "Winnipeg, MB",
     period: "Mar 2024 – Current",

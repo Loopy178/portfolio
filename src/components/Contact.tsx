@@ -16,19 +16,26 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("Form submitted with data:", formData);
     setIsSubmitting(true);
 
     try {
-      const form = e.currentTarget;
-      const fd = new FormData(form);
+      const fd = new FormData();
+      fd.append("name", formData.name);
+      fd.append("email", formData.email);
+      fd.append("message", formData.message);
       fd.append("access_key", "4bae47da-57ad-4a35-ae04-cd20c392de50");
 
+      console.log("Sending to API...");
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: fd,
       });
 
+      console.log("Response status:", response.status);
       const data = await response.json();
+      console.log("API response:", data);
+      
       if (data.success) {
         toast({
           title: "Message sent!",
@@ -39,6 +46,7 @@ export const Contact = () => {
         throw new Error(data.message || "Failed to send message");
       }
     } catch (error) {
+      console.error("Error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
