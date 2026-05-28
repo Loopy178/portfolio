@@ -15,6 +15,18 @@ const experiences = [
     ],
     color: "from-primary to-accent",
   },
+  {
+    title: "Software Developer",
+    company: "University of Manitoba",
+    location: "Winnipeg, MB",
+    period: "May 2026 – Current",
+    achievements: [
+      "Developed a script for post-processing data from simulations from NEMO",
+      "Collaborated with a team of developers to implement new features and fix bugs.",
+      "Conducted code reviews and participated in agile development processes.",
+    ],
+    color: "from-secondary to-accent",
+  }
   
 ];
 

@@ -37,7 +37,7 @@ export const Resume = () => {
             className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
             asChild
           >
-            <a href="/brij resume.pdf" download>
+            <a href="/brijress.pdf" download>
               <Download className="h-5 w-5 mr-2" />
               Download Resume (PDF)
             </a>
