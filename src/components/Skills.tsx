@@ -4,7 +4,6 @@ interface SkillCategory {
   title: string;
   icon: typeof Code2;
   items: string[];
-  description: string;
 }
 
 const skillCategories: SkillCategory[] = [
@@ -12,13 +11,11 @@ const skillCategories: SkillCategory[] = [
     title: "Programming Languages",
     icon: Code2,
     items: ["Java", "Python", "C/C++", "SQL", "JavaScript", "TypeScript", "HTML/CSS"],
-    description: "Core languages utilized for system software, scientific analysis, scripting, and web development.",
   },
   {
     title: "Frameworks & Libraries",
     icon: Layers,
     items: ["React", "Node.js", "FastAPI", "Next.js", "Tailwind CSS"],
-    description: "Modern web and API frameworks used for performant full-stack applications.",
   },
   {
     title: "Developer Tools & AI Workflows",
@@ -34,7 +31,6 @@ const skillCategories: SkillCategory[] = [
       "Cursor",
       "Markdown",
     ],
-    description: "Cloud, containerization, IDEs, and modern AI-assisted engineering tools.",
   },
   {
     title: "Hardware, Databases & Domain Tools",
@@ -47,7 +43,6 @@ const skillCategories: SkillCategory[] = [
       "Data Processing",
       "Vercel",
     ],
-    description: "Hardware microcontrollers, time-series telemetry databases, game engines, and ML tooling.",
   },
 ];
 
@@ -78,9 +73,6 @@ export const Skills = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    {category.description}
-                  </p>
                 </div>
 
                 <div className="flex flex-wrap gap-2.5">

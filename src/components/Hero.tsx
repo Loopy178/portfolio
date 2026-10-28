@@ -37,7 +37,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-xl md:text-2xl text-muted-foreground mb-4"
         >
-          Software Developer • Physics Researcher • Problem Solver
+          Software Developer • Physics  • Problem Solver
         </motion.p>
 
         <motion.p
@@ -46,7 +46,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
         >
-          Undergraduate Researcher at University of Manitoba analyzing Arctic Ocean iceberg movement with Python & ML. Passionate about AI/ML, full-stack systems, and scientific computing.
+          Undergraduate at University of Manitoba Passionate about AI/ML, full-stack systems, and scientific computing.
         </motion.p>
 
         {/* Social links */}
@@ -98,39 +98,6 @@ export const Hero = () => {
           </Button>
         </motion.div>
 
-        {/* CTA buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
-          className="flex items-center justify-center gap-4 flex-wrap"
-        >
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
-            onClick={() => scrollToSection("projects")}
-          >
-            View Projects
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
-            onClick={() => scrollToSection("resume")}
-          >
-            View Resume
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
-            onClick={() => scrollToSection("contact")}
-          >
-            Get in Touch
-          </Button>
-        </motion.div>
-
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [0, 10, 0] }}
