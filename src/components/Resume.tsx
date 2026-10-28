@@ -24,24 +24,26 @@ export const Resume = () => {
             View or download a comprehensive overview of my education, experience, projects, and technical skills.
           </p>
 
-          <div className="mb-6 rounded-lg overflow-hidden border border-border bg-background">
+          <div className="mb-6 rounded-lg overflow-hidden border border-border bg-background shadow-inner">
             <iframe
-              src="/brij resume.pdf"
+              src="/brijress.pdf"
               className="w-full h-[600px] md:h-[800px]"
               title="Brijesh Patel Resume"
             />
           </div>
 
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
-            asChild
-          >
-            <a href="/brijress.pdf" download>
-              <Download className="h-5 w-5 mr-2" />
-              Download Resume (PDF)
-            </a>
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              asChild
+            >
+              <a href="/brijress.pdf" download="Brijesh_Patel_Resume.pdf">
+                <Download className="h-5 w-5 mr-2" />
+                Download Resume (PDF)
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

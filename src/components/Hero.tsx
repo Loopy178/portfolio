@@ -18,7 +18,7 @@ export const Hero = () => {
           className="mb-6"
         >
           <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-4 backdrop-blur-sm">
-            Computer Science & Physics Student
+            Computer Science & Physics @ University of Manitoba
           </span>
         </motion.div>
 
@@ -37,7 +37,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-xl md:text-2xl text-muted-foreground mb-4"
         >
-          Eager to learn new things & Problem Solver
+          Software Developer • Physics Researcher • Problem Solver
         </motion.p>
 
         <motion.p
@@ -46,7 +46,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
         >
-          BSc in Computer Science & Physics @ University of Manitoba • Started Sept 2023
+          Undergraduate Researcher at University of Manitoba analyzing Arctic Ocean iceberg movement with Python & ML. Passionate about AI/ML, full-stack systems, and scientific computing.
         </motion.p>
 
         {/* Social links */}
@@ -62,7 +62,12 @@ export const Hero = () => {
             className="rounded-full border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
             asChild
           >
-            <a href="https://github.com/Loopy178" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/Loopy178"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+            >
               <Github className="h-5 w-5" />
             </a>
           </Button>
@@ -72,7 +77,12 @@ export const Hero = () => {
             className="rounded-full border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
             asChild
           >
-            <a href="https://www.linkedin.com/in/brijesh-patel-43b7672a5" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/brijesh-patel-43b7672a5"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
               <Linkedin className="h-5 w-5" />
             </a>
           </Button>
@@ -82,7 +92,7 @@ export const Hero = () => {
             className="rounded-full border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
             asChild
           >
-            <a href="mailto:brijjj213@gmail.com">
+            <a href="mailto:patelbv@myumanitoba.ca" aria-label="Email Brijesh">
               <Mail className="h-5 w-5" />
             </a>
           </Button>
@@ -93,7 +103,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="flex items-center justify-center gap-4"
+          className="flex items-center justify-center gap-4 flex-wrap"
         >
           <Button
             size="lg"
@@ -101,6 +111,14 @@ export const Hero = () => {
             onClick={() => scrollToSection("projects")}
           >
             View Projects
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 backdrop-blur-sm"
+            onClick={() => scrollToSection("resume")}
+          >
+            View Resume
           </Button>
           <Button
             size="lg"
