@@ -16,19 +16,26 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("Form submitted with data:", formData);
     setIsSubmitting(true);
 
     try {
-      const form = e.currentTarget;
-      const fd = new FormData(form);
+      const fd = new FormData();
+      fd.append("name", formData.name);
+      fd.append("email", formData.email);
+      fd.append("message", formData.message);
       fd.append("access_key", "4bae47da-57ad-4a35-ae04-cd20c392de50");
 
+      console.log("Sending to API...");
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: fd,
       });
 
+      console.log("Response status:", response.status);
       const data = await response.json();
+      console.log("API response:", data);
+      
       if (data.success) {
         toast({
           title: "Message sent!",
@@ -39,6 +46,7 @@ export const Contact = () => {
         throw new Error(data.message || "Failed to send message");
       }
     } catch (error) {
+      console.error("Error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
@@ -62,11 +70,6 @@ export const Contact = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Info */}
           <div className="space-y-6 animate-fade-in-up">
-            <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start gap-4">
-              </div>
-            </div>
-
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="text-lg font-bold mb-4">Let's Connect!</h3>
               <p className="text-muted-foreground leading-relaxed">
