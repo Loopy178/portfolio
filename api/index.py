@@ -39,16 +39,8 @@ async def submit_contact(contact: ContactMessage):
     3. Integrate with email service (SendGrid, AWS SES, etc.)
     """
     try:
-        # Log the message (in production, save to database or send email)
         print(f"Contact form submission from {contact.name} ({contact.email}): {contact.message}")
         
-        # TODO: Add email sending logic here
-        # Example with SendGrid:
-        # send_email(
-        #     to="krajani@ualberta.ca",
-        #     subject=f"Portfolio Contact: {contact.name}",
-        #     body=f"From: {contact.email}\n\n{contact.message}"
-        # )
         
         return {
             "success": True,

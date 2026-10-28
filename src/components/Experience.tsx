@@ -15,6 +15,21 @@ const experiences = [
     ],
     color: "from-primary to-accent",
   },
+
+  {
+    title: "Physics Tutor",
+    company: "University of Manitoba",
+    location: "Winnipeg, MB",
+    period: "Sep 2024 – current",
+    achievements: [
+      "Provide one-on-one tutoring sessions to undergraduate students in physics courses.",
+      "Assist students in understanding complex physics concepts and problem-solving techniques.",
+      "Develop personalized study plans to help students improve their academic performance.",
+      "Foster a supportive learning environment to encourage student engagement and success.",
+    ],
+    color: "from-secondary to-accent",
+
+  }
   
 ];
 
