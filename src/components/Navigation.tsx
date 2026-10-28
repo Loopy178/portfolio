@@ -7,6 +7,7 @@ const navItems = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Awards & Volunteering", href: "#awards-volunteering" },
   { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
@@ -62,7 +63,6 @@ export const Navigation = () => {
             : "bg-transparent"
         }`}
       >
-      {/*nav bar logo initials*/}
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a
@@ -73,7 +73,7 @@ export const Navigation = () => {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -88,6 +88,7 @@ export const Navigation = () => {
                 size="icon"
                 onClick={toggleTheme}
                 className="rounded-full"
+                aria-label="Toggle theme"
               >
                 {isDark ? (
                   <Sun className="h-5 w-5" />
@@ -104,6 +105,7 @@ export const Navigation = () => {
                 size="icon"
                 onClick={toggleTheme}
                 className="rounded-full"
+                aria-label="Toggle theme"
               >
                 {isDark ? (
                   <Sun className="h-5 w-5" />
@@ -116,6 +118,7 @@ export const Navigation = () => {
                 size="icon"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="rounded-full"
+                aria-label="Toggle navigation menu"
               >
                 {isMobileMenuOpen ? (
                   <X className="h-5 w-5" />

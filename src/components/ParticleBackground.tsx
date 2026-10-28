@@ -12,7 +12,7 @@ const ParticleBackground = () => {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    let mouse = { x: -1000, y: -1000, radius: 150 };
+    const mouse = { x: -1000, y: -1000, radius: 150 };
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;

@@ -1,33 +1,46 @@
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
-const experiences = [
+interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  type: string;
+  achievements: string[];
+  skills: string[];
+  color: string;
+}
+
+const experiences: ExperienceItem[] = [
   {
-    title: "Cashier / Team Leader",
-    company: "West 49",
+    title: "Summer Internship (Software Developer)",
+    company: "University of Manitoba",
     location: "Winnipeg, MB",
-    period: "Mar 2024 – Current",
+    period: "May 2025 – Sept 2025",
+    type: "Development",
     achievements: [
-      "Promptly and correctly receive payments from customers and issue amount due.",
-      "Treat customers in a friendly manner and effectively answer their queries.",
-      "Assist in inventory management and maintain thorough knowledge of store merchandise.",
-      "Provide excellent customer service while managing cash register operations.",
+      "Working with Dr. Juliana to develop software for analyzing iceberg movement in the Arctic Ocean.",
+      "Developing Python scripts for turning raw numerical model run data into readable, structured datasets.",
+      "Developed an analytical tool for analyzing the post-processed oceanographic files using Machine Learning.",
     ],
+    skills: ["Python", "Machine Learning", "Data Processing", "Scientific Computing"],
     color: "from-primary to-accent",
   },
   {
-    title: "Software Developer",
-    company: "University of Manitoba",
+    title: "Team Leader",
+    company: "West 49",
     location: "Winnipeg, MB",
-    period: "May 2026 – Current",
+    period: "Mar 2024 – Present",
+    type: "Retail Leadership",
     achievements: [
-      "Developed a script for post-processing data from simulations from NEMO",
-      "Collaborated with a team of developers to implement new features and fix bugs.",
-      "Conducted code reviews and participated in agile development processes.",
+      "Delivered strong customer service while handling transactions accurately and efficiently.",
+      "Managed inventory operations and supported daily store organization and merchandising.",
+      "Served as key-holder responsible for opening and closing the store and overseeing daily register reconciliation.",
     ],
-    color: "from-secondary to-accent",
-  }
-  
+    skills: ["Leadership", "Customer Service", "Inventory Management", "Operations"],
+    color: "from-secondary to-primary",
+  },
 ];
 
 export const Experience = () => {
@@ -62,38 +75,57 @@ export const Experience = () => {
                 className="relative pl-0 md:pl-20"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-background hidden md:block" />
+                <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-background hidden md:block shadow-md" />
 
-                <div className="bg-card/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div className="bg-card/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                        {exp.title}
-                      </h3>
-                      <div className="flex items-center gap-2 text-lg text-primary font-semibold mb-2">
+                      <div className="flex items-center gap-3 flex-wrap mb-1">
+                        <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                          {exp.title}
+                        </h3>
+                        <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-primary/10 text-primary border border-primary/20">
+                          {exp.type}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-lg text-primary font-semibold mb-1">
                         <Briefcase className="h-5 w-5" />
                         {exp.company}
                       </div>
-                      <p className="text-muted-foreground">{exp.location}</p>
+                      <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                        <MapPin className="h-4 w-4" />
+                        <span>{exp.location}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-muted-foreground mt-2 md:mt-0">
-                      <Calendar className="h-4 w-4" />
-                      <span className="text-sm">{exp.period}</span>
+                    <div className="flex items-center gap-2 text-muted-foreground bg-muted/40 px-3 py-1.5 rounded-lg self-start">
+                      <Calendar className="h-4 w-4 text-primary" />
+                      <span className="text-sm font-medium">{exp.period}</span>
                     </div>
                   </div>
 
-                  {exp.achievements && (
-                    <ul className="space-y-3 mt-4">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-br ${exp.color} mt-2 flex-shrink-0`} />
-                          <span className="text-muted-foreground leading-relaxed">
-                            {achievement}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <ul className="space-y-2.5 mt-4 mb-5">
+                    {exp.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div
+                          className={`w-2 h-2 rounded-full bg-gradient-to-br ${exp.color} mt-2 flex-shrink-0`}
+                        />
+                        <span className="text-muted-foreground leading-relaxed">
+                          {achievement}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2 pt-2 border-t border-border/40">
+                    {exp.skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="px-2.5 py-1 text-xs font-medium bg-muted/70 text-foreground/80 rounded-md border border-border"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}

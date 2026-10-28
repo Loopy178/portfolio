@@ -1,9 +1,55 @@
-const skills = {
-  "Languages": ["Python", "Java", "C++", "JavaScript", "TypeScript"],
-  "Databases": ["MySQL", "PostgreSQL", "MongoDB", "JSON"],
-  "Frameworks & Libraries": ["ReactJS", "NodeJS", "Express"],
-  "Development Tools": ["Git", "Docker", "VS Code", "Matlab"],
-};
+import { Code2, Cpu, Layers, Wrench } from "lucide-react";
+
+interface SkillCategory {
+  title: string;
+  icon: typeof Code2;
+  items: string[];
+  description: string;
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Programming Languages",
+    icon: Code2,
+    items: ["Java", "Python", "C/C++", "SQL", "JavaScript", "TypeScript", "HTML/CSS"],
+    description: "Core languages utilized for system software, scientific analysis, scripting, and web development.",
+  },
+  {
+    title: "Frameworks & Libraries",
+    icon: Layers,
+    items: ["React", "Node.js", "FastAPI", "Next.js", "Tailwind CSS"],
+    description: "Modern web and API frameworks used for performant full-stack applications.",
+  },
+  {
+    title: "Developer Tools & AI Workflows",
+    icon: Wrench,
+    items: [
+      "Git",
+      "Docker",
+      "GCP",
+      "VS Code",
+      "IntelliJ",
+      "PyCharm",
+      "Claude",
+      "Cursor",
+      "Markdown",
+    ],
+    description: "Cloud, containerization, IDEs, and modern AI-assisted engineering tools.",
+  },
+  {
+    title: "Hardware, Databases & Domain Tools",
+    icon: Cpu,
+    items: [
+      "Arduino Uno",
+      "InfluxDB",
+      "Godot",
+      "Machine Learning",
+      "Data Processing",
+      "Vercel",
+    ],
+    description: "Hardware microcontrollers, time-series telemetry databases, game engines, and ML tooling.",
+  },
+];
 
 export const Skills = () => {
   return (
@@ -17,25 +63,39 @@ export const Skills = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {Object.entries(skills).map(([category, items], index) => (
-            <div
-              key={category}
-              className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <h3 className="text-xl font-bold mb-6 text-primary">{category}</h3>
-              <div className="flex flex-wrap gap-3">
-                {items.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="px-4 py-2 bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg text-sm font-medium hover:scale-105 hover:shadow-md transition-all duration-300 cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <div
+                key={category.title}
+                className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up flex flex-col justify-between"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    {category.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2.5">
+                  {category.items.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="px-3.5 py-1.5 bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg text-sm font-medium hover:scale-105 hover:shadow-md transition-all duration-200 cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

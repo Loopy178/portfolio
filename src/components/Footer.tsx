@@ -10,7 +10,7 @@ export const Footer = () => {
               Brijesh Patel
             </p>
             <p className="text-sm text-muted-foreground">
-              Building whatever inspires me.
+              Computer Science & Physics • University of Manitoba
             </p>
           </div>
 
@@ -19,6 +19,7 @@ export const Footer = () => {
               href="https://github.com/Loopy178"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
             >
               <Github className="h-5 w-5" />
@@ -27,12 +28,14 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/brijesh-patel-43b7672a5"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
               className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:brijjj213@gmail.com"
+              href="mailto:patelbv@myumanitoba.ca"
+              aria-label="Send Email"
               className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
             >
               <Mail className="h-5 w-5" />
@@ -41,7 +44,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2026 Brijesh Patel. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Brijesh Patel. All rights reserved.</p>
         </div>
       </div>
     </footer>
