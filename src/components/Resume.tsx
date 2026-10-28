@@ -26,7 +26,7 @@ export const Resume = () => {
 
           <div className="mb-6 rounded-lg overflow-hidden border border-border bg-background shadow-inner">
             <iframe
-              src="/brijress.pdf"
+              src="./brijress.pdf"
               className="w-full h-[600px] md:h-[800px]"
               title="Brijesh Patel Resume"
             />
@@ -38,7 +38,7 @@ export const Resume = () => {
               className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
               asChild
             >
-              <a href="/brijress.pdf" download="Brijesh_Patel_Resume.pdf">
+              <a href="./brijress.pdf" download="Brijesh_Patel_Resume.pdf">
                 <Download className="h-5 w-5 mr-2" />
                 Download Resume (PDF)
               </a>
